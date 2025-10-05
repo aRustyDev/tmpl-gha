@@ -1,0 +1,10 @@
+---
+name: "{{name}}"
+author: "{{user}}"
+description: "{{desc}}"
+runs:
+  using: "docker"
+  image: "docker://ghcr.io/{{user}}/{{repo}}:{{tag}}"
+branding:
+  icon: "check-square"
+  color: "white"
