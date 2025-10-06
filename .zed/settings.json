@@ -1,0 +1,91 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent_servers": {
+    "Claude Code": {
+      "command": "/path/to/volta/bin/claude",
+      "args": [],
+      "env": {}
+    }
+  },
+  "format_on_save": "on",
+  "icon_theme": "Catppuccin Macchiato",
+  "auto_install_extensions": {
+    // Themes
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    // Build Tools
+    "dockerfile": true,
+    "git-firefly": true,
+    "just": true,
+    // Config Langs
+    "toml": true,
+    "ini": true,
+    "rainbow-csv": true,
+    "gosum": true,
+    "tombi": true,
+    "github-actions": true,
+    // Querying
+    "graphql": true,
+    // Templating
+    "mustache": true,
+    // Software: Compiled
+    "zig": true,
+    "jq": true,
+    // "env": false,
+    "basher": true,
+    "golangci-lint": true,
+    "codebook": true, // REVIEW
+    "marksman": true, // REVIEW
+    "harper": true, // REVIEW
+    "typos": true, // REVIEW
+    "cspell": true,
+    "package-swift-lsp": false,
+    "crates-lsp": true,
+    "just-ls": true,
+    "ast-grep": true,
+    "markdownlint": true,
+    "mcp-server-github": true,
+    "mcp-server-sequential-thinking": false,
+    "mcp-server-container-use": true
+  },
+  "context_servers": {
+    "mcp-server-github": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "github_personal_access_token": "GH_PAT"
+      }
+    },
+    "terraform-context": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {}
+    },
+    "container-use": {
+      "source": "custom",
+      "command": "/path/to/container-use",
+      "args": ["stdio"],
+      "env": {}
+    },
+    "justfile": {
+      "source": "custom",
+      "command": "/path/to/just-mcp",
+      "args": ["--stdio"],
+      "env": {}
+    }
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Macchiato",
+    "dark": "One Dark"
+  }
+}
