@@ -63,10 +63,10 @@
         "github_personal_access_token": "GH_PAT"
       }
     },
-    "terraform-context": {
-      "source": "extension",
-      "enabled": true,
-      "settings": {}
+    "homebrew": {
+      "source": "/path/to/custom",
+      "command": "brew",
+      "args": ["mcp-server"]
     },
     "container-use": {
       "source": "custom",
