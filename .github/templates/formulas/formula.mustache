@@ -1,0 +1,26 @@
+# {{repo}}.rb
+
+class {{name}} < Formula
+    desc "{{description}}"
+    homepage "https://github.com/{{user}}/{{repo}}"
+    url "https://github.com/{{user}}/{{repo}}/archive/{{tag}}.tar.gz"
+    version "{{tag}}"
+    sha256 "{{sha256}}"
+    license "{{license}}"
+    head "https://github.com/PromptExecution/just-mcp.git", branch: "main"
+
+    {{#deps_build}}
+    depends_on "{{dep}}" => :build
+    {{/deps_build}}
+
+    def install
+      {{#install_steps}}
+      {{step}}
+      {{/install_steps}}
+    end
+
+    test do
+      # this test runs `ghloc --version` and checks that it starts with "ghloc "
+      assert_match /^ghloc /, shell_output("#{bin}/ghloc --version")
+    end
+  end
