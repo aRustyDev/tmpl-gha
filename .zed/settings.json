@@ -60,12 +60,12 @@
       "source": "extension",
       "enabled": true,
       "settings": {
-        "github_personal_access_token": "GH_PAT"
+        "github_personal_access_token": "{{ op://Developer/chevnm3z3byyfgx252s6l3bf34/token }}"
       }
     },
     "homebrew": {
-      "source": "/path/to/custom",
-      "command": "brew",
+      "source": "custom",
+      "command": "/path/to/brew",
       "args": ["mcp-server"]
     },
     "container-use": {

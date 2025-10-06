@@ -49,3 +49,15 @@ setup-dev:
     require("brew") install pinact
     require("brew") install mdbook
     require("brew") install mustache
+    require("brew") install container-use
+    require("brew") install just-mcp
+    require("brew") install just-mcp
+    just format-settings
+
+format-settings:
+    sed -i 's|/path/to/container-use|{{ require("container-use") }}|g' .zed/settings.json
+    sed -i 's|/path/to/just-mcp|{{ require("just-mcp") }}|g' .zed/settings.json
+    sed -i 's|/path/to/volta|{{ require("volta") }}|g' .zed/settings.json
+    sed -i 's|/path/to/brew|{{ require("brew") }}|g' .zed/settings.json
+    sed -i 's|GH_PAT|{{ require("brew") }}|g' .zed/settings.json
+    op inject -i .zed/settings.json -o .zed/settings.json
